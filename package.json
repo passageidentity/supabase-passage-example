@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@passageidentity/passage-elements": "^1.2.0",
+    "@passageidentity/passage-node": "^2.1.2",
+    "@supabase/supabase-js": "^2.12.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "jsonwebtoken": "^9.0.0",
+    "next": "^13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
