@@ -6,9 +6,7 @@ import Link from 'next/link'
 
 
 function Index ({isAuthorized, userID, todos})  {
-  console.log(todos?.length)
   if (isAuthorized) {
-    console.log("loading dashbaord")
     return (
       <div className={styles.container}>
       <p>
@@ -22,7 +20,6 @@ function Index ({isAuthorized, userID, todos})  {
     </div>
     )
   } else {
-    console.log("loading login")
     return(
       <div className={styles.main}>
         <PassageLogin />
