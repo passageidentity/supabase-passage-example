@@ -14,6 +14,6 @@ export const getAuthenticatedUserFromSession = async (req, res) => {
         }
       } catch (error) {
         // authentication failed
-        return {isAuthorized: false, appID: appID};
+        return {isAuthorized: false, userID: ''};
       }
   }
