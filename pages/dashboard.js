@@ -13,13 +13,6 @@ export default function Dashboard({isAuthorized, userID, todos}) {
     })
     
     return(
-<<<<<<< Updated upstream
-        <div className={styles.container}>
-        <p>
-          Welcome {userID}!
-        </p>
-        {todos?.length > 0 ? (
-=======
       <div className={styles.body}>
         <div className={styles.main}>
         <div className={styles.title}>
@@ -27,7 +20,6 @@ export default function Dashboard({isAuthorized, userID, todos}) {
         </div>
         <div className={styles.card}>
           {todos?.length > 0 ? (
->>>>>>> Stashed changes
           todos.map((todo) => <p key={todo.id}>{todo.title}</p>)
         ) : (
           <p>You have completed all todos!</p>
