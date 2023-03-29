@@ -15,7 +15,7 @@ export default function Dashboard({isAuthorized, userID, todos}) {
     return(
         <div className={styles.container}>
         <p>
-          Welcome {userID}!{' '}
+          Welcome {userID}!
         </p>
         {todos?.length > 0 ? (
           todos.map((todo) => <p key={todo.id}>{todo.title}</p>)
