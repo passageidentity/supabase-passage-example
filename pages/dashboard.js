@@ -4,7 +4,6 @@ import Router from 'next/router';
 import { getAuthenticatedUserFromSession } from '@/utils/passage'
 import { getSupabase } from '../utils/supabase'
 
-
 export default function Dashboard({isAuthorized, userID, todos}) {
     useEffect(() => {
       if(!isAuthorized){
@@ -13,23 +12,22 @@ export default function Dashboard({isAuthorized, userID, todos}) {
     })
     
     return(
-      <div className={styles.body}>
         <div className={styles.main}>
-        <div className={styles.title}>
+          <div className={styles.container}>
+          <h1>
           Welcome {userID}!{' '}
-        </div>
-        <div className={styles.card}>
+          </h1><br></br>
+          <div className={styles.list}>
           {todos?.length > 0 ? (
-          todos.map((todo) => <p key={todo.id}>{todo.title}</p>)
+          todos.map((todo) => <li key={todo.id}>{todo.title}</li>)
         ) : (
           <p>You have completed all todos!</p>
         )}
-        </div> 
+        </div>
       </div>
       </div>
     )
   }
-
 
 export const getServerSideProps = async (context) => {
     const loginProps = await getAuthenticatedUserFromSession(context.req, context.res)
