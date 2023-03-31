@@ -17,7 +17,6 @@ export default function Dashboard({isAuthorized, userID, todos}) {
         new PassageUser().signOut()
         Router.push('/')
     }
-
     
     return(
         <div className={styles.main}>
@@ -26,7 +25,6 @@ export default function Dashboard({isAuthorized, userID, todos}) {
           Welcome {userID}!{' '}
           </h1>
           <br></br>
-
           <button onClick={signOut}>Sign Out</button>
           <br></br>
           <div className={styles.list}>
