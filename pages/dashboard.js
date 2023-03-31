@@ -3,20 +3,30 @@ import { useEffect } from 'react';
 import Router from 'next/router';
 import { getAuthenticatedUserFromSession } from '@/utils/passage'
 import { getSupabase } from '../utils/supabase'
+import { PassageUser } from '@passageidentity/passage-elements/passage-user'
 
 export default function Dashboard({isAuthorized, userID, todos}) {
     useEffect(() => {
       if(!isAuthorized){
         Router.push('/');
       }
+      
     })
+
+    const signOut = async ()=>{
+        new PassageUser().signOut()
+        Router.push('/')
+    }
     
     return(
         <div className={styles.main}>
           <div className={styles.container}>
           <h1>
           Welcome {userID}!{' '}
-          </h1><br></br>
+          </h1>
+          <br></br>
+          <button onClick={signOut}>Sign Out</button>
+          <br></br>
           <div className={styles.list}>
           {todos?.length > 0 ? (
           todos.map((todo) => <li key={todo.id}>{todo.title}</li>)

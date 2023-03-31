@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@passageidentity/passage-elements": "^1.2.0",
+    "@passageidentity/passage-elements": "^1.2.1",
     "@passageidentity/passage-node": "^2.1.2",
     "@supabase/supabase-js": "^2.12.1",
     "eslint": "8.36.0",
