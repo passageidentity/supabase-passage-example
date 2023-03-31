@@ -27,7 +27,7 @@ export default function Dashboard({isAuthorized, userID, todos}) {
           </h1>
           <br></br>
 
-          <button className="close-button" onClick={signOut}>Sign Out</button>
+          <button onClick={signOut}>Sign Out</button>
           <br></br>
           <div className={styles.list}>
           {todos?.length > 0 ? (
