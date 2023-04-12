@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   const supabase = getSupabase(userID);
   const { data, error } = await supabase
     .from("todo")
-    .insert({ title: todo })
+    .insert({ title: todo, user_id: userID })
     .select()
     .single();
   if (error) return res.status(400).json(error);
